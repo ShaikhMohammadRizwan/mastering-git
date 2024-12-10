@@ -1,0 +1,132 @@
+******************* Git & Github *******************
+
+1. Check Git is Install Properly.
+
+=> git --version
+Ans:- the version shows that is installed your device
+
+
+2. Configure to Git with your name and email.
+
+	=> git config --global user.name '<name>'
+	=> git config --global user.email '<email@gmail.com>'
+
+
+3. How to Create a new Repository.
+
+	=> git init
+	     conclusion:- Default name of a branch has been 'Master' and 'Main' use frequently as the name for the primary branch.
+
+	=> git config --global init.defaultBranch <name>
+                    eg:- git config --global init.defaultBranch main
+
+ 	    Ans :- Then create a new folder on the folder where you initialized first git init and open the folder on your Editor and run the command
+  	    'git init'
+
+
+4. How to check status (status means what files do you change currently).
+ans :- status tells us current;y on the branch that there are not commits yet and that there are some untracked or 1, 2 files
+
+	=> git status
+
+	    eg:- $ git status
+	              On branch main
+
+		No commits yet
+
+		Untracked files:
+		(use "git add <file>..." to include in what will be committed)
+		        hello.js
+		        readme.md
+
+		nothing added to commit but untracked files present (use "git add" to track)
+
+5. how to add and trackdown .
+	=> git add readem.md 
+	    conclu :- it means that you added file files called readme.md
+
+6. What is Commiting.
+ans :- Commiting is like a snapshot of your project at a certain point.
+ans2 :- Think of it as creating a whole new copy of your project and telling git to remember when you did it at what time, so in the future if anything happens you time travell to this folder with the commit name you specify to git and see what you had in there.
+
+	=> git commit -m 'Message you want to tell your git to remeber it'
+
+	    for Eg :-  git commit -m 'Readme.md files had store successfully'
+		  [main (root-commit) 3456000] Readme.md files had store successfully
+		  1 file changed, 1 insertion(+)
+		  create mode 100644 readme.md
+
+rep:- notice that only readme.md files are store not hello.js
+
+
+7. How to track both files and commit them with in a single commit action.
+ans :- the dot (.) after the git add tells to add all files created modifed or deleted to the git tracking and then you use usally commit for all the changes in one action.
+
+	=> git add .
+	=> git commit -m 'all files are addedd successfully'
+
+	    for Eg :- git commit -m 'all files are added successfully'
+		 [main e17b35f] all files are added successfully
+		 2 files changed, 2 insertions(+)
+		 create mode 100644 hello.js
+		 create mode 100644 test.js
+
+8. How to see the history of all commits we've created.
+
+	=> git log
+
+9. What is Github and how if differs from git.
+ans :- Git is a tool you use to track changes, whereas Github is a cloud platform that allows you to store your git repositories online and collborate with others.
+
+
+10. How many types of Repository are there ?
+
+	=> 2 types of repository 
+                    _________________|______________
+	   |	             	|	        |
+	   |			        |
+            Local Repository 		 Remote Repository
+
+
+
+11. What is Local Repository :-
+ans :- Local Repository :- Local repo is a version of a project that exists on your own machine, laptop or whatever else you use where you do your developer work.
+ans2 :- When you initiliaze a repo using git init it create a local repo in your folder
+
+
+12. What is Remote Repository :-
+ans1 :- Remote repo is a version of a project stored on a server like Github, Gitlab or BidBuckets, it's used to share code between collaborators and keep projects version in sync across diffrent users computers.
+ans2 :- When collaborating with a team you'll have 2 kinds of repo evryone in the team will have a local repo on there machine and there will also be this one common remote repo from which everyone will sync their local repo versions
+	
+
+
+13. How to link our local repository to the remote origin
+ans :- first you switched the default master branch name to main branch  by running this git
+
+	=> git branch -M main
+
+ans :- this will change the branch name to main 
+
+Now to link our local repo to a remote origin
+
+	=> git remote add origin https://github.com/ShaikhMohammadRizwan/mastering-git.git
+
+finally to push your local commits to Github use :-
+
+	=> git push -u origin main
+
+	for Eg :- git push -u origin main
+	             Enumerating objects: 7, done.
+	             Counting objects: 100% (7/7), done.
+	             Delta compression using up to 4 threads
+	             Compressing objects: 100% (3/3), done.
+	             Writing objects: 100% (7/7), 628 bytes | 125.00 KiB/s, done.
+	             Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+	             To https://github.com/ShaikhMohammadRizwan/mastering-git.git
+	              * [new branch]      main -> main
+	             branch 'main' set up to track 'origin/main'.
+
+Remember:- we used origin here to refer to the remote repository instead of typing the full url.
+
+
+******************* _---@END---_ *******************
