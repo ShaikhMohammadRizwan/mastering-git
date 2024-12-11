@@ -144,4 +144,45 @@ finally to push your local commits to Github use :-
 Remember:- we used origin here to refer to the remote repository instead of typing the full url.
 
 
+14. Branching & Merging.
+ans :- Branches in git allow you to create a diffrent version of your project like making a copy of a poject at a
+          specific moment in time whatever changes you make in this copied version won't affect the original,
+          the main project or branch stays untouched while you experiment modify or add new features in the copied branch
+          if everything works out you can later merge your changes back into the original project if not no worries the original 
+          remains safe and unchages when working in a team using seprate branches for diffrent features or bug fixes is essential,
+          it allows you and your team to work independently on diffrent parts of the code without casuing confilcts or errors,
+          ensuring everyone can focus on thier own tasks.
+ans2 :- At start you'll have one default branch called 'main' (to create a new branch run this command)
+
+	=> git branch <name of your branch>
+
+	     for Eg :- git branch branch-name
+
+
+step2 :- To switch to this newly created branch .
+
+	=> git checkout branch-name
+
+	    for Eg :- git checkout branch-name
+	                 Switched to branch 'branch-name'
+
+
+step3 :- Now if you want to go back to main.
+
+	=> git checkout main
+
+	    for Eg :- git checkout main
+		 Switched to branch 'main'
+		 Your branch is up to date with 'origin/main'.
+
+
+Pro Tips :- there is a little shortcut to create a new branch and immediatly move it to do that run this command
+
+	=> git checkout -b <name of your branch>
+
+	     for Eg :- git checkout -b feature-branch
+		  Switched to a new branch 'feature-branch'
+
+
+
 ******************* _---@END---_ *******************
